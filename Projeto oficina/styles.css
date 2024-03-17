@@ -1,0 +1,334 @@
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+:root {
+  --first-color : #222831; 
+  --second-color: #393e46;
+  --third-color: #FFC400;
+  --fourth-color: #eeeeee;
+}
+
+ * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(34,40,49);
+  background-color: linear-gradient(180deg, rgba(34,40,49,1) 0%, rgba(57,62,70,1) 96%);;
+  height: 100vh;
+  overflow-y: auto; 
+  transition: background 0.2s linear;
+}
+
+body.light {
+  background: var(--fourth-color);
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: var(--first-color);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 16px;
+  width: 40px;
+  color: var(--third-color);
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background-color: var(--second-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+main {
+  margin: 0;
+  margin-top: 30px;
+  padding-top: 100px; 
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.cabecalho {
+  padding: 1% 0% 1% 3%;
+  background-color: var(--second-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  gap: 50px;
+}
+
+.cabecalho__menu {
+  display: flex;
+  align-self: start;
+  gap: 55px;
+
+}
+
+.cabecalho__menu__link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.41rem;
+  font-weight: 550;
+  color: var(--third-color);
+  text-decoration: none;
+  position: relative;
+}
+
+.cabecalho__menu__link::after {
+  content: " ";
+  width: 0;
+  height: 2px;
+  background-color: var(--third-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+}
+
+.cabecalho__menu__link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.wo{
+  display: flex;
+  align-items: end;
+}
+
+.wo-logo {
+  width: 250px;
+  padding: 0px 2px 0px 0px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.wo-logo:hover {
+  width: 270px;
+  transform: scale(1.1);
+}
+
+.card {
+  background-color: var(--second-color);
+  color: var(--third-color);
+  margin: 14px;
+  text-align: center;
+  cursor: move;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 0.188rem 0.188rem 1.25rem 0.188rem;
+  max-width: 10.938rem;
+  max-height: 10.938rem;
+  transition: all 0.3s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.11),
+    0 12px 16px rgba(220, 233, 255, 0.48);
+}
+
+.card.light {
+  background-color: var(--third-color);
+  color: var(--first-color);
+}
+
+.card.light input {
+  background-color: var(--third-color);
+  color: var(--first-color);
+}
+
+.button {
+  background-color: var(--second-color);
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: var(--third-color);
+  cursor: pointer;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 100px;
+  min-width: 180px;
+  max-height: 44px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  /*position: relative;*/
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  transition: 1s ease;
+}
+
+
+.button:hover {
+  opacity: .75;
+  background-color: var(--third-color);
+  color: var(--first-color);
+  
+}
+
+.button.light {
+  background-color: var(--third-color);
+  color: var(--first-color);
+}
+
+.button:hover.light {
+  background-color: var(--first-color);
+  color: var(--third-color);
+}
+
+
+.input {
+  background-color: var(--second-color);
+  color: var(--third-color);
+  text-align: center;
+  margin: 5px;
+  cursor: text;
+  outline: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.input.light{
+  background-color: var(--third-color);
+  color: var(--first-color);
+}
+
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 80vh;
+  width: 100%;
+}
+
+.fa-ship {
+  font-size: 50px;
+  padding: 14px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /*display: flex;*/
+  align-self: center;
+}
+
+.fa-xmark {
+  position: absolute;
+  cursor: pointer;
+  top: 7px;
+  right: 8px
+}
+
+.area_da_oficina {
+  padding: 0% 7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 82px;
+}
+
+.fa-angles-down{
+  background-color: var(--first-color);
+  color: var(--third-color);
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  /*transform: translateX(-50%);*/
+  padding: 15px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.fa-angles-down:hover,
+.fa-angles-down:focus
+{
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+.fa-angles-down.light{
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+}
+
+.rodape {
+  background-color: var(--second-color);
+  color: var(--third-color);
+  padding: 5px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  transition-duration: 2s;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+
+

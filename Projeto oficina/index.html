@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css.">
+    <script src="https://kit.fontawesome.com/240743f0db.js" crossorigin="anonymous"></script>
+    <title>Warehouse Organizer</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <div class="wo">
+               <a href="index.html" target="_blank"><img src="/img/logocerto-removebg-preview1.png" alt="Warehouse Organizador logo" class="wo-logo"></a> 
+            </div>
+            <a class="cabecalho__menu__link" href="https://dlcdiesel.com.br/" target="_blank">Saiba Mais</a>
+            <a class="cabecalho__menu__link" href="https://www.linkedin.com/company/dlcdiesel/" target="_blank">Contatos</a>
+        </nav>
+        <div>
+            <input type="checkbox" class="checkbox" id="chk">
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </header>
+    <main>
+        <section class="area_da_oficina">
+            <div>
+                <button class="button" id="button" onclick="generateCard()">Nova Turbina</button>
+            </div> 
+            <div id="cardContainer">
+                <div class="card" id="card1">
+                    <i class="fa-solid fa-xmark" id="closeIcon"></i>
+                    <i class="fa-solid fa-ship"></i>
+                    <input type="text" class="input" placeholder="Turbina">
+                    <input type="text" class="input" placeholder="Cliente">
+                    <input type="text" class="input" placeholder="Embarcação/Vessel">
+                    <input type="text" class="input" placeholder="Ordem de Serviço">
+                </div>
+            </div>
+        </section>
+    </main>
+    <button id="hideShowButton" class="fa-solid fa-angles-down"></button>
+    <footer class="rodape">
+        
+        <p id="myFooter">Desenvolvido por <a class="cabecalho__menu__link" href="https://www.linkedin.com/in/lucas-fiuza-a60190142/" target="_blank">Lucas Fiuza</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
