@@ -7,12 +7,13 @@ Geração de Cards Arrastáveis: Crie e personalize cards para representar itens
 
 Arraste e Solte: Organize os cards de maneira intuitiva através da funcionalidade de arrastar e soltar.
 
-Capturas de Tela
+![WO1](https://github.com/LKSfiuza/WarehouseOrganizer/assets/117465153/6d912f4b-fc9d-4fb2-8c70-0620a55dcab0)
+![WO2](https://github.com/LKSfiuza/WarehouseOrganizer/assets/117465153/7e3137b0-250b-4c6c-92ff-c93192e72de4)
 
-Adicione capturas de tela do seu aplicativo em ação.
+
 
 Instalação
-Clone o repositório: git clone https://github.com/seu-usuario/warehouse-organizer.git
+Clone o repositório: git clone https://github.com/LKSfiuza/warehouse-organizer.git
 Instale as dependências: npm install
 Uso
 Inicie o programa: npm start
